@@ -21,7 +21,7 @@ defmodule Webfinger.Mixfile do
   defp package do
     [
      name: :webfinger,
-     files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+     files: ["lib", "mix.exs", "README*", "LICENSE*"],
      maintainers: ["Ross Jones"],
      licenses: ["MIT"],
      links: %{"GitHub" => "https://github.com/rossjones/webfinger"}
@@ -37,7 +37,8 @@ defmodule Webfinger.Mixfile do
     [
      {:httpotion, "~> 3.0.2"},
      {:poison, "~> 3.1"},
-     {:sweet_xml, "~> 0.6.5"}
+     {:sweet_xml, "~> 0.6.5"},
+     {:ex_doc, ">= 0.0.0", only: :dev}
    ]
   end
 end
