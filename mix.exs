@@ -7,7 +7,25 @@ defmodule Webfinger.Mixfile do
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+     description: description(),
+     package: package()]
+  end
+
+  defp description() do
+    """
+    A simple webfinger client for querying user information
+    """
+  end
+
+  defp package do
+    [
+     name: :webfinger,
+     files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+     maintainers: ["Ross Jones"],
+     licenses: ["MIT"],
+     links: %{"GitHub" => "https://github.com/rossjones/webfinger"}
+   ]
   end
 
   def application do
